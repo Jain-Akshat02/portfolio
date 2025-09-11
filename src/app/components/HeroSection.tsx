@@ -3,11 +3,20 @@
 import Image from 'next/image'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FaSquareXTwitter } from "react-icons/fa6";
+import GitHubCalendar from 'react-github-calendar';
+import SkillsSection from './SkillSection';
+import { Home, User, Briefcase, FileText } from 'lucide-react';
+
 export default function HeroSection() {
+    const navItems = [
+        { name: 'Home', url: '#', icon: Home },
+        { name: 'About', url: '#', icon: User },
+        { name: 'Projects', url: '#', icon: Briefcase },
+        { name: 'Resume', url: '#', icon: FileText }
+    ]
   return (
     <section className="relative min-h-screen bg-black text-white px-6 py-12 flex justify-center overflow-hidden">
-      {/* 🔦 Radial Gradient Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),_transparent_70%)] z-0"></div>
+      
 
       <div className="relative z-10 w-full max-w-5xl flex flex-col md:flex-row gap-10 items-center md:items-start">
 
@@ -21,9 +30,9 @@ export default function HeroSection() {
         />
 
         {/* Main Content */}
-        <div className="flex-1">
+        <div className="flex-1 mt-3 md:mt-0">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-            <h1 className="text-3xl font-bold">Hello, This is Akshat Jain</h1>
+            <h1 className="text-3xl font-bold mt-2">Hello, This is Akshat Jain</h1>
             <span className="mt-2 sm:mt-0 inline-flex items-center gap-2 px-3 bg-pink-200 py-1 text-sm rounded-full cursor-pointer hover:bg-pink-300 transition">
               {/* Add any tag or icon here if needed */}
             </span>
@@ -51,6 +60,9 @@ export default function HeroSection() {
               Hey! I'm Akshat, a Computer Science undergrad passionate about building full-stack applications that are clean, practical, and solve real-world problems. I love shipping fast, learning faster, and turning concepts into usable, working products.
             </p>
           </div>
+          <SkillsSection />
+
+          <GitHubCalendar username="Jain-Akshat02" />
 
           {/* Hire Me */}
           <div>
