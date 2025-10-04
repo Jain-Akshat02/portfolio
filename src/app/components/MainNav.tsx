@@ -7,8 +7,8 @@ export default function MainNav() {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex w-full justify-center bg-neutral-950/80 backdrop-blur-md border-b border-white/10 py-3 px-3">
-      <div className="max-w-6xl w-min overflow-x-auto border-2px border-white/10">
+    <div className="fixed top-0 left-0 right-0 z-50 flex w-full justify-center bg-neutral-950/80 backdrop-blur-md border-b border-white/10 py-3 px-3 overflow-hidden">
+      <div className="max-w-6xl w-min border-2px border-white/10">
         <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home">
           <div className="grid grid-cols-1 gap-4">
