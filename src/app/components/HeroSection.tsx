@@ -186,21 +186,22 @@ export default function HeroSection() {
                   alt="Portfolio Website"
                   width={640}
                   height={360}
-                  className="w-full h-auto rounded-md ring-1 ring-white/10"
+                  className="w-full h-auto rounded-md ring-1 ring-white/10 cursor-pointer"
+                  onClick={() => window.open("https://chat-app-uf4o.onrender.com/", "_blank")}
                 />
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-sm sm:text-base font-semibold text-neutral-100">
                     Chat App
                   </h3>
                   <a href="">
-                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer" />
+                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer"  onClick={()=>{ window.open("https://github.com/Jain-Akshat02/Chat-App")}}/>
                   </a>
                   <a
                     href="https://chat-app-uf4o.onrender.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Link className="h-5 w-5 text-neutral-300 cursor-pointer" />
+                    <Link className="h-5 w-5 text-neutral-300 cursor-pointer" onClick={() => window.open("https://chat-app-uf4o.onrender.com/", "_blank")} />
                   </a>
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-neutral-400">
@@ -214,16 +215,19 @@ export default function HeroSection() {
                   alt="Portfolio Website"
                   width={640}
                   height={420}
-                  className="w-full h-48 rounded-md ring-1 ring-white/10"
+                  className="w-full h-48 rounded-md ring-1 ring-white/10 cursor-pointer"
+                  onClick={() => window.open("https://stock-app-alpha-blond.vercel.app/", "_blank")}
                 />
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-sm sm:text-base font-semibold text-neutral-100">
                     Stock App
                   </h3>
-                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer" />
+                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer"
+                  onClick={()=>{ window.open("https://github.com/Jain-Akshat02/stock-app")}}
+                   />
                   <Link
-                    className="h-5 w-5 text-neutral-300"
-                    href="https://stock-managar-9wdq.vercel.app/"
+                    className="h-5 w-5 text-neutral-300 cursor-pointer"
+                   onClick={() => window.open("https://stock-app-alpha-blond.vercel.app/", "_blank")}
                   />
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-neutral-400">
