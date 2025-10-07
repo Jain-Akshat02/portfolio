@@ -18,17 +18,20 @@ export const MenuItem = ({
   active,
   item,
   children,
+  onClick,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-neutral-300 hover:text-white"
+        onClick={onClick}
       >
         {item}
       </motion.p>

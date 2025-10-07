@@ -5,8 +5,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import GitHubCalendar from "react-github-calendar";
 import { motion } from "framer-motion";
-import {Link} from "lucide-react"
-import { Github } from 'lucide-react';
+import { Link } from "lucide-react";
+import { Github } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
   SiReact,
@@ -53,11 +53,10 @@ const skills = {
   ],
 };
 
-
 export default function HeroSection() {
   const router = useRouter();
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100 px-4 sm:px-6 py-16 sm:py-20 md:py-28 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100 px-4 sm:px-6 py-16 sm:py-20 md:py-28 overflow-hidden">
       <div className="relative z-10 mx-auto w-full max-w-6xl grid grid-cols-1 items-start gap-8 sm:gap-10 md:grid-cols-[auto,1fr]">
         {/* Profile Image */}
         <motion.div
@@ -150,7 +149,9 @@ export default function HeroSection() {
                     className="flex flex-col items-center gap-2 p-2 sm:p-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300"
                   >
                     <Icon className={`text-2xl sm:text-3xl ${color}`} />
-                    <span className="text-xs sm:text-sm text-neutral-300">{name}</span>
+                    <span className="text-xs sm:text-sm text-neutral-300">
+                      {name}
+                    </span>
                   </div>
                 ))}
             </div>
@@ -173,7 +174,7 @@ export default function HeroSection() {
             </div>
           </div>
           {/* Projects */}
-          <div className="mt-10 sm:mt-12 rounded-lg border border-white/10 bg-black/30 p-4 sm:p-5 shadow-inner">
+          <section id="projects" className="mt-10 sm:mt-12 rounded-lg border border-white/10 bg-black/30 p-4 sm:p-5 shadow-inner">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-400 mb-6">
               Projects
             </h2>
@@ -188,12 +189,23 @@ export default function HeroSection() {
                   className="w-full h-auto rounded-md ring-1 ring-white/10"
                 />
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-                  <h3 className="text-sm sm:text-base font-semibold text-neutral-100">Chat App</h3>
+                  <h3 className="text-sm sm:text-base font-semibold text-neutral-100">
+                    Chat App
+                  </h3>
+                  <a href="">
                   <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer" />
-                  <Link className="h-5 w-5 text-neutral-300 cursor-pointer" />
+                  </a>
+                  <a
+                    href="https://chat-app-uf4o.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Link className="h-5 w-5 text-neutral-300 cursor-pointer" />
+                  </a>
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-neutral-400">
-                  A modern personal chat app built with MERN Stack and TailwindCSS.
+                  A modern personal chat app built with MERN Stack and
+                  TailwindCSS.
                 </p>
               </div>
               <div className="rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors p-3 sm:p-4">
@@ -205,22 +217,25 @@ export default function HeroSection() {
                   className="w-full h-48 rounded-md ring-1 ring-white/10"
                 />
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-                  <h3 className="text-sm sm:text-base font-semibold text-neutral-100">Stock App</h3><Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer" 
-                  
+                  <h3 className="text-sm sm:text-base font-semibold text-neutral-100">
+                    Stock App
+                  </h3>
+                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer" />
+                  <Link
+                    className="h-5 w-5 text-neutral-300"
+                    href="https://stock-managar-9wdq.vercel.app/"
                   />
-                  <Link className="h-5 w-5 text-neutral-300"
-                  href="https://stock-managar-9wdq.vercel.app/"
-                   />
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-neutral-400">
-                  An inventory maintainer app built with Next.js and TailwindCSS.
+                  An inventory maintainer app built with Next.js and
+                  TailwindCSS.
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Contact */}
-          <div className="mt-10 sm:mt-12">
+          <section className="mt-10 sm:mt-12" id="contact">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
               Let's Work Together
             </h2>
@@ -239,9 +254,9 @@ export default function HeroSection() {
             >
               ✉️ Get in Touch
             </a>
-          </div>
+          </section>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 import HeroSection from "./components/HeroSection";
-import GitHubCalendar from "react-github-calendar";
 import MainNav from "./components/MainNav";
 export default function Home() {
   return (
