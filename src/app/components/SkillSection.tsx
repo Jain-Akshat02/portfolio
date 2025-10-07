@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5 } from "react-icons/fa"; // Example icons
 
 const skills = [

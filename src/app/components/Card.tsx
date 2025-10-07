@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
-
+import Image from "next/image";
 const Card = ({
   image,
   title,
@@ -21,7 +21,7 @@ const Card = ({
       )}
     >
       {/* Image */}
-      <img
+      <Image
         src={image}
         alt={title}
         className="w-full h-40 object-cover rounded-md mb-4"
