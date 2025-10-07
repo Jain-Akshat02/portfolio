@@ -67,11 +67,12 @@ const Skeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-expect-error
+      // @ts-expect-error motion animate accepts repeat options; upstream types incomplete
       repeat: Infinity,
       repeatDelay: 1,
     });
-  }, [sequence]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row shrink-0 justify-center items-center gap-2">

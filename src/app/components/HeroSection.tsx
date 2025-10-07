@@ -7,7 +7,6 @@ import GitHubCalendar from "react-github-calendar";
 import { motion } from "framer-motion";
 import { Link } from "lucide-react";
 import { Github } from "lucide-react";
-import { useRouter } from "next/navigation";
 import {
   SiReact,
   SiNextdotjs,
@@ -54,7 +53,6 @@ const skills = {
 };
 
 export default function HeroSection() {
-  const router = useRouter();
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100 px-4 sm:px-6 py-16 sm:py-20 md:py-28 overflow-hidden">
       <div className="relative z-10 mx-auto w-full max-w-6xl grid grid-cols-1 items-start gap-8 sm:gap-10 md:grid-cols-[auto,1fr]">
