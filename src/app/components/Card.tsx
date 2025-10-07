@@ -1,15 +1,7 @@
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
-type CardProps = {
-  image: string;
-  title: string;
-  description: string;
-};
 
-// const Card: React.FC<CardProps> = ({ image, title, description }) => {
-//   // component implementation
-// };
 const Card = ({
   image,
   title,
