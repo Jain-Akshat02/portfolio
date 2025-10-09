@@ -171,8 +171,50 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+          {/* Experience */}
+
+          <section
+  id="experience"
+  className="mt-10 sm:mt-12 rounded-2xl border border-white/10 bg-black/30 p-6 sm:p-8 shadow-inner"
+>
+  <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-400 mb-2">
+    Experience
+  </h2>
+  <h3 className="text-xl font-bold text-white mb-8">Freelance Projects</h3>
+
+  {/* Project 1 */}
+  <div className="mb-8">
+    <h4 className="text-lg font-semibold text-white mb-1">
+      🩱 Inventory Management System — Lingerie Business (Jan-2025)
+    </h4>
+    <p className="text-neutral-300 leading-relaxed text-sm">
+      Developed a <span className="text-white font-medium">custom inventory management web app</span> using{" "}
+      <span className="text-white">Next.js</span>, <span className="text-white">Express</span>, and{" "}
+      <span className="text-white">MongoDB</span> to streamline product tracking and stock updates.
+      Designed intuitive dashboards for real-time monitoring and implemented role-based access for secure management.
+      Improved operational efficiency by reducing manual tracking effort.
+    </p>
+  </div>
+
+  {/* Project 2 */}
+  <div>
+    <h4 className="text-lg font-semibold text-white mb-1">
+      🌐 Landing Page — Trade Association       (May-2025)
+    </h4>
+    <p className="text-neutral-300 leading-relaxed text-sm">
+      Built a <span className="text-white font-medium">modern, responsive landing page</span> using{" "}
+      <span className="text-white">Next.js</span> and <span className="text-white">Tailwind CSS</span>, aligned with the
+      association’s branding. Integrated smooth scroll animations and interactive sections for improved engagement.
+      Delivered a lightweight, SEO-friendly site with excellent performance and accessibility scores.
+    </p>
+  </div>
+</section>
+
           {/* Projects */}
-          <section id="projects" className="mt-10 sm:mt-12 rounded-lg border border-white/10 bg-black/30 p-4 sm:p-5 shadow-inner">
+          <section
+            id="projects"
+            className="mt-10 sm:mt-12 rounded-lg border border-white/10 bg-black/30 p-4 sm:p-5 shadow-inner"
+          >
             <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-400 mb-6">
               Projects
             </h2>
@@ -185,21 +227,38 @@ export default function HeroSection() {
                   width={640}
                   height={360}
                   className="w-full h-auto rounded-md ring-1 ring-white/10 cursor-pointer"
-                  onClick={() => window.open("https://chat-app-uf4o.onrender.com/", "_blank")}
+                  onClick={() =>
+                    window.open("https://chat-app-uf4o.onrender.com/", "_blank")
+                  }
                 />
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-sm sm:text-base font-semibold text-neutral-100">
                     Chat App
                   </h3>
                   <a href="">
-                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer"  onClick={()=>{ window.open("https://github.com/Jain-Akshat02/Chat-App")}}/>
+                    <Github
+                      className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer"
+                      onClick={() => {
+                        window.open(
+                          "https://github.com/Jain-Akshat02/Chat-App"
+                        );
+                      }}
+                    />
                   </a>
                   <a
                     href="https://chat-app-uf4o.onrender.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Link className="h-5 w-5 text-neutral-300 cursor-pointer" onClick={() => window.open("https://chat-app-uf4o.onrender.com/", "_blank")} />
+                    <Link
+                      className="h-5 w-5 text-neutral-300 cursor-pointer"
+                      onClick={() =>
+                        window.open(
+                          "https://chat-app-uf4o.onrender.com/",
+                          "_blank"
+                        )
+                      }
+                    />
                   </a>
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-neutral-400">
@@ -214,18 +273,31 @@ export default function HeroSection() {
                   width={640}
                   height={420}
                   className="w-full h-48 rounded-md ring-1 ring-white/10 cursor-pointer"
-                  onClick={() => window.open("https://stock-app-alpha-blond.vercel.app/", "_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://stock-app-alpha-blond.vercel.app/",
+                      "_blank"
+                    )
+                  }
                 />
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-sm sm:text-base font-semibold text-neutral-100">
                     Stock App
                   </h3>
-                  <Github className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer"
-                  onClick={()=>{ window.open("https://github.com/Jain-Akshat02/stock-app")}}
-                   />
+                  <Github
+                    className="h-5 w-5 text-neutral-300 ml-45 sm:ml-10 cursor-pointer"
+                    onClick={() => {
+                      window.open("https://github.com/Jain-Akshat02/stock-app");
+                    }}
+                  />
                   <Link
                     className="h-5 w-5 text-neutral-300 cursor-pointer"
-                   onClick={() => window.open("https://stock-app-alpha-blond.vercel.app/", "_blank")}
+                    onClick={() =>
+                      window.open(
+                        "https://stock-app-alpha-blond.vercel.app/",
+                        "_blank"
+                      )
+                    }
                   />
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-neutral-400">
