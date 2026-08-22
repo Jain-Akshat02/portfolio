@@ -1,9 +1,8 @@
-// src/components/MainNav.tsx
 "use client";
 import React from "react";
 
 const navLinks = [
-  { label: "Home", href: "#", onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) },
+  { label: "Home", href: "#" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Writings", href: "#writings" },
@@ -11,15 +10,27 @@ const navLinks = [
 ];
 
 export default function MainNav() {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex w-full justify-center bg-neutral-950/80 backdrop-blur-md border-b border-white/10 py-3 px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex w-full justify-center bg-neutral-950/90 backdrop-blur-md border-b border-white/10 py-3 px-4">
       <div className="flex items-center gap-1 sm:gap-2">
-        {navLinks.map(({ label, href, onClick }) => (
+        {navLinks.map(({ label, href }) => (
           <a
             key={label}
             href={href}
-            onClick={onClick}
-            className="px-3 py-1.5 rounded-lg text-sm text-neutral-400 hover:text-white hover:bg-white/10 transition-all duration-200"
+            onClick={(e) => handleClick(e, href)}
+            className="px-3 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-white hover:bg-white/10 transition-all duration-200 cursor-pointer"
           >
             {label}
           </a>
