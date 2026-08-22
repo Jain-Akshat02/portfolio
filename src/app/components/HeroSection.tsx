@@ -308,6 +308,39 @@ export default function HeroSection() {
             </div>
           </section>
 
+          {/* Writings */}
+          <section
+            id="writings"
+            className="mt-10 sm:mt-12 rounded-lg border border-white/10 bg-black/30 p-4 sm:p-5 shadow-inner"
+          >
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-400 mb-6">
+              Writings
+            </h2>
+            <p className="text-neutral-500 text-sm mb-6">
+              I write about things I build, learn, and find interesting — mostly around web dev and software.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Placeholder article card — replace with real ones */}
+              <a
+                href="https://medium.com/@your-username"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 p-4 transition-all duration-200"
+              >
+                <span className="text-xs text-purple-400 font-medium">Coming soon</span>
+                <h3 className="mt-2 text-sm font-semibold text-neutral-100 group-hover:text-white">
+                  First article dropping soon
+                </h3>
+                <p className="mt-1 text-xs text-neutral-500">
+                  Stay tuned — articles on building with MERN, lessons learned, and more.
+                </p>
+                <span className="mt-3 inline-block text-xs text-neutral-400 group-hover:text-purple-400 transition-colors">
+                  Read on Medium →
+                </span>
+              </a>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mt-10 sm:mt-12" id="contact">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
